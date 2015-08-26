@@ -1,0 +1,76 @@
+
+
+
+/*body { background: url(http://subtlepatterns.com/patterns/seamless_paper_texture.png)
+}*/
+
+#IconEmail, #IconAddress, #IconPhone, #IconTwitter, #ImageLinkedIn{vertical-align: middle;
+	padding: 0.1rem;
+	margin-bottom: 2px;
+}
+
+.Email a, .Twitter a, .Phone a, .Address a{
+	text-decoration: none;
+}
+
+.FlexContainer{
+  display:flex;
+  flex-direction: row;
+}
+
+img {
+  max-width:100%;}
+
+.Data{
+  margin-left: 10px;
+}
+
+footer {
+	padding: 1rem;
+}
+
+/*Rotation of the photo*/
+
+.Front {
+position: absolute;
+  width: 41.7%;
+  height: 55%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+  backface-visibility: hidden;
+  perspective:1000;
+  z-index: 2;
+}
+
+.Front:hover{
+	transform: rotateY(180deg);
+}
+
+.Back {
+height: 50%;
+  width: 50%;
+  position: relative;	
+  z-index: 1;
+}
+
+/*Media queries for different media formats*/
+
+@media screen and (max-width: 667px){.FlexContainer{ 
+ 
+  font-size: 35px;
+  flex-wrap:wrap;
+}
+.Back {
+	display: none;
+}
+.Front{
+	position: relative;
+	top:0;
+	left:0;
+	width: 100%;
+
+}
+
+
+
+}

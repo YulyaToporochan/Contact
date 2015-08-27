@@ -12,29 +12,50 @@
 .Email a, .Twitter a, .Phone a, .Address a{
 	text-decoration: none;
 }
-
-.FlexContainer{
-  display:flex;
-  flex-direction: row;
-}
+a:visited {
+        text-decoration: blink;
+    }
 
 img {
   max-width:100%;}
 
-.Data{
-  margin-left: 10px;
-}
-
 footer {
 	padding: 1rem;
+  bottom: 0;
 }
 
-/*Rotation of the photo*/
+.Front{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ContainerAddress{
+ position: relative;
+ top:-40px;
+ left:50px;
+ width:90%;
+}
+
+.Phone{
+  margin-top: -20px;
+}
+
+
+/*Media queries for bigger screens*/
+
+@media screen and (min-width: 600px) and (orientation: landscape){
+  .FlexContainer{
+  display: flex;  
+  flex-direction: row;
+  justify-content:flex-start;
+  margin-bottom: 200px;
+
+}
 
 .Front {
-position: absolute;
-  width: 41.7%;
-  height: 55%;
+  width: 50%;
+  margin-top: 6px;
   transform-style: preserve-3d;
   transition: all 1.0s linear;
   backface-visibility: hidden;
@@ -43,34 +64,41 @@ position: absolute;
 }
 
 .Front:hover{
-	transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .Back {
-height: 50%;
-  width: 50%;
-  position: relative;	
+  width: auto;
+  position: relative; 
   z-index: 1;
 }
 
-/*Media queries for different media formats*/
+.Data{
+  margin-left: 20px;
+}
 
-@media screen and (max-width: 667px){.FlexContainer{ 
- 
-  font-size: 35px;
-  flex-wrap:wrap;
+footer {
+  clear: both;
+  bottom: 0;
 }
-.Back {
-	display: none;
-}
-.Front{
-	position: relative;
-	top:0;
-	left:0;
-	width: 100%;
 
-}
+img {max-width: 100%;}
+
+body {background-color: #FFE9DA}
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

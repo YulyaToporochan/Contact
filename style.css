@@ -15,7 +15,7 @@
 
 /*change to something else*/
 a:visited {
-        text-decoration: blink;
+        color: #007F7E;
     }
 
 img {
@@ -23,13 +23,11 @@ img {
 
 footer {
 	padding: 1rem;
-  bottom: 0;
 }
+  
 
 .Front{
   position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .ContainerAddress{
@@ -43,50 +41,78 @@ footer {
   margin-top: -20px;
 }
 
+.Business-Card{
+  padding: 0;
+}
+
 
 /*Media queries for bigger screens*/
 
-@media screen and (min-width: 700px) and (orientation: landscape){
+@media screen and (min-width: 1025px) and (orientation: landscape){
   .FlexContainer{
   display: flex;  
   flex-direction: row;
   justify-content:flex-start;
-  margin-bottom: 200px;
+  
 
+}
+
+.Business-Card{
+  perspective: 1000;
+  padding: 25px;
+}
+
+.Business-Card:hover .Front {
+  -webkit-transform: rotateY(180deg); 
+}
+
+.Business-Card:hover .Back {
+  -webkit-transform: rotateY(0deg);
+}
+
+
+.Front, .Back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .Front {
-  margin-top: 6px;
-  transform-style: preserve-3d;
-  transition: all 1.0s linear;
-  backface-visibility: hidden;
-  perspective:1000;
   z-index: 2;
-}
-
-.Front:hover{
-  transform: rotateY(180deg);
+  -webkit-transition: ease 1.5s;
+  -o-transition: ease 1.5s;
+  transition: ease 1.5s;
+  transform-style: preserve-3d;
 }
 
 .Back {
-  width: auto;
-  position: relative; 
+  -webkit-transform: rotateY(-180deg);
+  -webkit-transition: ease 1.5s;
+  -o-transition: ease 1.5s;
+  transition: ease 1.5s;
+  transform-style: preserve-3d;
   z-index: 1;
 }
 
 .Data{
-  margin-left: 20px;
+  display: inline-block;
+  width: 60%;
 }
 
-footer {
-  clear: both;
-  bottom: 0;
-}
 
 img {max-width: 100%;}
 
+footer{
+  position: absolute;
+  bottom: 0;
+  margin-left: 40%;
+}
 
-
+a:link{
+  color: #007F7E;
+}
+a:visited {
+        color: #007F7E;
+    }
 
 }
 

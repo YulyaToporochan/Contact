@@ -14,7 +14,10 @@
 }
 
 /*change to something else*/
-a:visited {
+a:link{
+  color: #007F7E;
+}
+a:active {
         color: #007F7E;
     }
 
@@ -110,7 +113,7 @@ footer{
 a:link{
   color: #007F7E;
 }
-a:visited {
+a:active {
         color: #007F7E;
     }
 

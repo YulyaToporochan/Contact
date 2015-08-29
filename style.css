@@ -12,6 +12,8 @@
 .Email a, .Twitter a, .Phone a, .Address a{
 	text-decoration: none;
 }
+
+/*change to something else*/
 a:visited {
         text-decoration: blink;
     }
@@ -44,7 +46,7 @@ footer {
 
 /*Media queries for bigger screens*/
 
-@media screen and (min-width: 600px) and (orientation: landscape){
+@media screen and (min-width: 700px) and (orientation: landscape){
   .FlexContainer{
   display: flex;  
   flex-direction: row;
@@ -54,7 +56,6 @@ footer {
 }
 
 .Front {
-  width: 50%;
   margin-top: 6px;
   transform-style: preserve-3d;
   transition: all 1.0s linear;

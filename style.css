@@ -9,13 +9,13 @@
 	margin-bottom: 2px;
 }
 
-.Email a, .Twitter a, .Phone a, .Address a{
+.Email a, .Twitter a, .Phone a, .Address a, .LinkedIn a{
 	text-decoration: none;
 }
 
 /*change to something else*/
 a:link{
-  color: #007F7E;
+  color: 00227F;
 }
 a:active {
         color: #007F7E;
@@ -111,7 +111,7 @@ footer{
 }
 
 a:link{
-  color: #007F7E;
+  color: 00227F;
 }
 a:active {
         color: #007F7E;

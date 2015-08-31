@@ -5,25 +5,21 @@
 }*/
 
 #IconEmail, #IconAddress, #IconPhone, #IconTwitter, #ImageLinkedIn, #vCardIcon{vertical-align: middle;
-	padding: 0.1rem;
-	margin-bottom: 2px;
+	padding: 0.2rem;
+	
 }
-
+.Front img, .Back img {max-width:100%;}
 
 .Email a, .Twitter a, .Phone a, .Address a, .LinkedIn a, .vCard a{
 	text-decoration: none;
 }
 
-/*change to something else*/
 a:link{
   color: 00227F;
 }
 a:active {
         color: #007F7E;
     }
-
-img {
-  max-width:100%;}
 
 footer {
 	padding: 1rem;
@@ -38,17 +34,16 @@ footer {
  position: relative;
  top:-40px;
  left:50px;
- width:90%;
+ width: auto;
 }
 
 .Phone{
   margin-top: -20px;
 }
 
-.Business-Card{
-  padding: 0;
+.FlexContainer{
+  display: table;
 }
-
 
 /*Media queries for bigger screens*/
 
@@ -102,13 +97,10 @@ footer {
   width: 60%;
 }
 
-
-img {max-width: 100%;}
-
-footer{
-  position: absolute;
+footer {
+  
+  text-align: center;
   bottom: 0;
-  margin-left: 40%;
 }
 
 a:link{

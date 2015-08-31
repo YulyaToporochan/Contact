@@ -4,12 +4,13 @@
 /*body { background: url(http://subtlepatterns.com/patterns/seamless_paper_texture.png)
 }*/
 
-#IconEmail, #IconAddress, #IconPhone, #IconTwitter, #ImageLinkedIn{vertical-align: middle;
+#IconEmail, #IconAddress, #IconPhone, #IconTwitter, #ImageLinkedIn, #vCardIcon{vertical-align: middle;
 	padding: 0.1rem;
 	margin-bottom: 2px;
 }
 
-.Email a, .Twitter a, .Phone a, .Address a, .LinkedIn a{
+
+.Email a, .Twitter a, .Phone a, .Address a, .LinkedIn a, .vCard a{
 	text-decoration: none;
 }
 

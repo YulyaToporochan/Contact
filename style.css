@@ -8,7 +8,7 @@
 	padding: 0.2rem;
 	
 }
-.Front img, .Back img {max-width:100%;}
+img {max-width: 100%}
 
 .Email a, .Twitter a, .Phone a, .Address a, .LinkedIn a, .vCard a{
 	text-decoration: none;
@@ -34,7 +34,8 @@ footer {
  position: relative;
  top:-40px;
  left:50px;
- width: auto;
+ width: 100%;
+
 }
 
 .Phone{
@@ -42,7 +43,7 @@ footer {
 }
 
 .FlexContainer{
-  display: table;
+  display: block;
 }
 
 /*Media queries for bigger screens*/

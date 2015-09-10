@@ -33,9 +33,6 @@ footer {
 }
 
 
-.credits li{
-  padding: 0.8rem;}
-
 .Front{
   position: absolute;
 }
@@ -47,7 +44,7 @@ article{
 }
 
 .Phone{
-  margin-top: -20px;
+  margin-top: -25px;
 }
 
 .LinkedIn, .vCard {
@@ -65,9 +62,9 @@ html, body {
 Credits
 *************/
 .Impressum ul
-{display: flex;
-  flex-direction: row;
-  justify-content:flex-end;
+{display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-justify-content:flex-end;
 
 }
 

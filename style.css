@@ -5,15 +5,15 @@
 }*/
 
 #IconEmail, #IconAddress, #IconPhone, #IconTwitter, #ImageLinkedIn, #vCardIcon{vertical-align: middle;
-	padding: 0.2rem;
-	
+  padding: 0.2rem;
+  
 }
 
-img {max-width: 100%;
-}
+.Front img {width:100%;}
+.Data {margin-left:10px;}
 
 .Email a, .Twitter a, .Phone a, .Address a, .LinkedIn a, .vCard a{
-	text-decoration: none;
+  text-decoration: none;
 }
 
 a:link{
@@ -32,10 +32,6 @@ footer {
  clear: both;
 }
 
-
-.Front{
-  position: absolute;
-}
 
 article{
  position: relative;
@@ -57,76 +53,31 @@ html, body {
   overflow-x: hidden; 
 }
 
+.myResume-Skills{display: inline-flex; flex-wrap:wrap;}
+ul {list-style-type: circle;}
 
-/**************
-Credits
-*************/
-.Impressum ul
-{display: -webkit-flex;
-  -webkit-flex-direction: row;
-  -webkit-justify-content:flex-end;
-
-}
-
-.Impressum a {
-  text-decoration: none;
-}
-
-.Impressum li{
-  list-style: none;
-  margin: 3px;
-}
+li {padding:5px 0px 0px 0px;}
 
 /*Media queries for bigger screens*/
 
 
 @media screen and (min-width: 1200px) and (orientation:landscape) {
 
-.Business-Card{
-  perspective: 1000;
-  padding: 25px;
+.Front{
   float: left;
-  width: 45%;
+  width: 49%;
 }
 
-.Business-Card:hover .Front {
-  -webkit-transform: rotateY(180deg); 
-}
-
-.Business-Card:hover .Back {
-  -webkit-transform: rotateY(0deg);
-}
-
-
-.Front, .Back {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.Front {
-  z-index: 2;
-  -webkit-transition: ease 1.5s;
-  -o-transition: ease 1.5s;
-  transition: ease 1.5s;
-  transform-style: preserve-3d;
-}
-
-.Back {
-  -webkit-transform: rotateY(-180deg);
-  -webkit-transition: ease 1.5s;
-  -o-transition: ease 1.5s;
-  transition: ease 1.5s;
-  transform-style: preserve-3d;
-  z-index: 1;
-}
 
 .Data{
+  top:0;
+  margin-bottom:220px;
   float:right;
   width: 50%;
-  margin-right: 20px;
+
 }
 
-
+}
 
 a:link{
   color: #257F69;
@@ -135,21 +86,100 @@ a:active {
         color: #007F7E;
     }
 
-footer{
-  position: absolute;
+
+
+/*-------stylize navigation for desired effect---------*/
+
+.navigation {
+  list-style: none;
+  background: #92d3b3; /*light green */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
+  /*hides nav behind content */
+  z-index: 0;
+  /*get rid of color gap on top of menu*/
+  margin-top: 0;   
 }
 
-.Impressum ul{
-  clear: right;
-  
-
+.FlexContainer {  
+  background-color: #ffffff; /* white */
+  position: relative;
+  top: 0;
+  left: 0;
+z-index: 1;
+  padding: 0em;
 }
 
+li.nav-item {
+  padding: 20px;
+  font-size: 22px;
+}
+       /*--------end of navigation styling--------*/
 
 
+    /*----stylize nav-trigger actions and looks-----*/
+/*hide the checkbox*/
+.nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
 }
 
+label[for="nav-trigger"] {
+  /*nav stays in the same spot as user scrolls*/
+  position: fixed; 
+  /*position hamburger menu*/
+  top: 15px;
+  left: 15px;
+  /*z-index needs to be 1 higher than site-wrap*/
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  /*changing to pointer indicates interactivity*/
+  cursor: pointer;
+  color: #111111;
+}
+
+/*styling to create "hamburger" icon (refer to notes)*/
+.hidden_nav:before {
+  content: "";
+  position: absolute;
+  top: 1em;
+  width: 2em;
+  height: .25em;
+  border-top: .7em double #000;
+  border-bottom: 0.25em solid #000;
+  z-index: 3;
+}
+
+/*the following lines make the effect work*/
+/*below styling controls label position when menu opens- add 15px, because we did left:15px in label[for="nav-trigger"]*/
+/*uses adjacent sibling selector (+)--> nav-trigger:checked must come first so label moves after checkbox is activated*/
+.nav-trigger:checked + label {
+  left: 200px;
+}
+
+/*ensures that the site-wrap is pushed to the right*/
+/*uses general sibling selector (~) to target site wrap after nav-trigger gets activated*/
+.nav-trigger:checked ~ .FlexContainer {
+  left: 180px;
+}
+
+/*add slight transition to effect*/
+
+.nav-trigger + label, .FlexContainer {
+  transition: left 0.2s;
+}
+
+/*keep site-wrap from scrolling across window from left to right when menu is opened*/
+
+    /*----end of styling navigation actions and looks----*/
+
+/*---end of what is required for sliding hamburger drawer effect--*/
 
 
 

@@ -23,9 +23,6 @@ a:active {
         color: #007F7E;
     }
 
-
-
-
 footer {
   font-size: 0.75em;
   color:#ccc;
@@ -52,8 +49,10 @@ footer {
 
 html, body {
   width: auto;
-  overflow-x: hidden; 
+  overflow-x: hidden; font-family: sans-serif;
 }
+
+h1, h2, h3, h4 {font-family: serif;}
 
 .myResume-Skills{display: inline-flex; flex-wrap:wrap;}
 ul {list-style-type: circle;}

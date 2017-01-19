@@ -4,19 +4,11 @@
 /*body { background: url(http://subtlepatterns.com/patterns/seamless_paper_texture.png)
 }*/
 
-#IconEmail, #IconAddress, #IconPhone, #IconTwitter, #ImageLinkedIn, #vCardIcon{vertical-align: middle;
-  padding: 0.2rem;
-  
-}
+#IconEmail, #IconAddress, #IconPhone, #IconTwitter, #ImageLinkedIn, #vCardIcon, #IconInstagram{vertical-align: middle;}
 
 .Front img {width:100%;}
-.Data {margin-left:10px;}
 
-.Email a, .Twitter a, .Phone a, .Address a, .LinkedIn a, .vCard a{
-  text-decoration: none;
-}
-
-a:link{
+a:link{ text-decoration: none;
   color: #257F69;
 }
 a:active {
@@ -46,6 +38,8 @@ footer {
   margin-top: 10px;
 }
 
+.Instagram {margin-top:10px;}
+
 
 html, body {
   width: auto;
@@ -74,18 +68,10 @@ li {padding:5px 0px 0px 0px;}
   top:0;
   margin-bottom:220px;
   float:right;
-  width: 50%;
+  width: 50%;}
 
 }
 
-}
-
-a:link{
-  color: #257F69;
-}
-a:active {
-        color: #007F7E;
-    }
 
 /*-------stylize navigation for desired effect---------*/
 
@@ -180,7 +166,9 @@ label[for="nav-trigger"] {
 
 /*---end of what is required for sliding hamburger drawer effect--*/
 
-
+/*styling for the fashion page-*/
+.Furimages {text-align: center;}
+.Furimages img {display:inline-block;vertical-align: middle;max-width: 100%;height:auto; padding: 5px;}
 
 
 

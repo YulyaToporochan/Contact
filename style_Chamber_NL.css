@@ -1,0 +1,42 @@
+
+
+
+/*body { background: url(http://subtlepatterns.com/patterns/seamless_paper_texture.png)
+}*/
+
+a:link{ text-decoration: none;
+  color: #257F69;
+}
+a:active {
+        color: #007F7E;
+    }
+.Message {font-size:14px; line-height: 22px; font-family:Verdana, Arial, Helvetica, sans-serif; color:#666666;}
+
+
+/*Media queries for bigger screens*/
+
+
+@media screen and (min-width: 1200px) and (orientation:landscape) {
+
+.content {
+  width: 45%;
+}
+.Message {font-size:16px;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

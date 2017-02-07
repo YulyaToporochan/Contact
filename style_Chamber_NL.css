@@ -25,7 +25,14 @@ a:active {
 
 }
 
+@media screen and (min-width: 768px) and (orientation:landscape) {
 
+.content {
+  width: 50%;
+}
+.Message {font-size:15px;}
+
+}
 
 
 
